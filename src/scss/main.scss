@@ -1,0 +1,84 @@
+
+@font-face{
+    font-family: 'myriadpro-regular';
+    src: url('../fonts/MyriadPro/myriadpro-regular.ttf');
+    src: url('../fonts/MyriadPro/myriadpro-regular.eot');
+    src: url('../fonts/MyriadPro/myriadpro-regular.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Montserrat-Thin';
+    src: url('../fonts/Montserrat/Montserrat-Thin.ttf');
+    src: url('../fonts/Montserrat/Montserrat-Thin.eot');
+    src: url('../fonts/Montserrat/Montserrat-Thin.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'TruenoBdOl';
+    src: url('../fonts/trueno/TruenoBdOl.otf');
+    src: url('../fonts/trueno/TruenoBdOl.ttf');
+    src: url('../fonts/trueno/TruenoBdOl.eot');
+    src: url('../fonts/trueno/TruenoBdOl.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'TruenoSBd';
+    src: url('../fonts/trueno/TruenoSBd.otf');
+    src: url('../fonts/trueno/TruenoSBd.ttf');
+    src: url('../fonts/trueno/TruenoSBd.eot');
+    src: url('../fonts/trueno/TruenoSBd.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'TruenoBd';
+    src: url('../fonts/trueno/TruenoBd.ttf');
+    src: url('../fonts/trueno/TruenoBd.otf');
+    src: url('../fonts/trueno/TruenoBd.eot');
+    src: url('../fonts/trueno/TruenoBd.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'TruenoLt';
+    src: url('../fonts/trueno/TruenoLt.otf');
+    src: url('../fonts/trueno/TruenoLt.eot');
+    src: url('../fonts/trueno/TruenoLt.woff');
+    src: url('../fonts/trueno/TruenoLt.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Audiowide';
+    src: url('../fonts/Audiowide/Audiowide-Regular.eot');
+    src: url('../fonts/Audiowide/Audiowide-Regular.ttf');
+    src: url('../fonts/Audiowide/Audiowide-Regular.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+////////////// mixins & variable
+
+$color:#623232;
+$bgLighter:#F4E4CB;
+
+
+@mixin box{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+
+@import "sass_modules/appearance";
+
+
+
+
+
