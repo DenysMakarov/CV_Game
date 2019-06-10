@@ -1,89 +1,131 @@
 import {Builder} from "./modules/Build";
+
 let createCart = new Builder();
 
 
 import {mixedCard} from "./modules/data";
 
-
-
-let cardBlock = document.getElementById("comp_cards");
-// for(let i = 0; i < 5; i++){
-//     let x = createCart.createCards();
-//     cardBlock.appendChild(x)
-// }
-
-
-console.log(cardBlock)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// let Cards = mixedCard;
 
 ///////////////////
 let comp = [];
-let me = [];
+let my = [];
 let compDamage;
-let meDamage;
-
+let myDamage;
+let cardMyBlock = document.getElementById("my_cards");
+let cardCompBlock = document.getElementById("comp_cards");
+let passButton = document.getElementById("pass_btn_after");
+let DmgComp;
 
 // console.log(cards)
-document.getElementById("button").addEventListener("click", (e) => {
+document.getElementById("btn_cover_before").addEventListener("click", (e) => {
+    // DmgComp = countDamage(comp);
 
-    // console.log(mixedCard)
+    if (comp.length < 4 || my.length < 4) {
 
-    if (mixedCard.length == 0) {
-        console.log("jhjhjkhkh")
-        compDamage = countDamage(comp);
-        meDamage = countDamage(me);
-        // console.log(compDamage);
-        // console.log(meDamage);
-        comparisonDamage()
-    } else {
-        cardBlock.innerHTML = "";
+        createMyBox();
+        setTimeout(function () {
+            createCompBox();
+        }, 500)
 
-        comp.push(mixedCard[+mixedCard.length - 1]);
-        mixedCard.pop();
-        me.push(mixedCard[+mixedCard.length - 1]);
-        mixedCard.pop();
-        for(let i = 0; i < me.length; i++){
-            let x = createCart.createCards(me[i]);
-            cardBlock.appendChild(x)
-        }
-        // console.log(comp)
-        // console.log(me)
+
+    } else if (comp.length == 4 || my.length == 4) {
+
+        createMyBox();
+        createCompBox();
+        console.log("asdadad");
+
+        // setTimeout(function () {
+            compDamage = countDamage(comp);
+            myDamage = countDamage(my);
+            comparisonDamage();
+            console.log("compDamage" + compDamage);
+            console.log("myDamage" + myDamage)
+        // }, 10)
     }
-})
+
+    if (comp.length > 0 || my.length > 0){
+        passButton.style.zIndex = 100;
+    }
+});
+
+
+function createMyBox() {
+    my.push(mixedCard[+mixedCard.length - 1]);
+    mixedCard.pop();
+    cardMyBlock.appendChild(createCart.createCards(my[+my.length - 1]))
+}
+
+function createCompBox() {
+    comp.push(mixedCard[+mixedCard.length - 1]);
+    mixedCard.pop();
+    cardCompBlock.appendChild(createCart.createCards(comp[+comp.length - 1]))
+}
+
+function createComCards() {
+    for (let i = 0; i < comp.length; i++) {
+        let x = createCart.createCards(comp[i]);
+        cardCompBlock.appendChild(x);
+    }
+}
+
+function createMyCards() {
+    for (let i = 0; i < my.length; i++) {
+        let y = createCart.createCards(my[i]);
+        cardMyBlock.appendChild(y)
+    }
+}
 
 
 function comparisonDamage() {
-    switch (compDamage < meDamage) {
-        case true: console.log("Win You"); break;
-        case false: console.log("Win Comp");
+    if(compDamage > 21 && myDamage > 21 || compDamage == myDamage){
+        console.log("You both equal")
     }
+    else if (compDamage < myDamage && myDamage < 22 || compDamage > 21 && myDamage < 22){
+        console.log("You Win");
+    }
+    else if (compDamage > myDamage || compDamage < 22 && myDamage > 21){
+        console.log("Comp Win");
+    }
+
+    // switch (compDamage < myDamage && compDamage < 22 && myDamage < 22) {
+    //     case true:
+    //         console.log("You Win");
+    //         break;
+    //     case false:
+    //         console.log("Comp Win");
+    // }
 }
 
 function countDamage(target) {
-    let x = [];
+    let arrDamage = [];
     target.map((el) => {
-        x.push(el.damage);
+        arrDamage.push(el.damage);
     });
-    x = x.reduce(function (a, b) {
+    arrDamage = arrDamage.reduce(function (a, b) {
         return a + b
     })
-    return x
+    return arrDamage
 }
 
+
+passButton.addEventListener("click", (e) => {
+    DmgComp = countDamage(comp);
+    for (let i = 0; i < 5; i++) {
+
+
+            DmgComp = countDamage(comp);
+            if (DmgComp < 15) {
+                    createCompBox()
+            }
+
+
+    }
+    compDamage = countDamage(comp);
+    myDamage = countDamage(my);
+
+    comparisonDamage();
+
+    console.log("compDamage" + compDamage);
+    console.log("myDamage" + myDamage)
+});
