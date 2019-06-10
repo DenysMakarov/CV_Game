@@ -19,34 +19,40 @@ let DmgComp;
 
 // console.log(cards)
 document.getElementById("btn_cover_before").addEventListener("click", (e) => {
-    // DmgComp = countDamage(comp);
 
-    if (comp.length < 4 || my.length < 4) {
 
+    if (comp.length > 1){
+        DmgComp = countDamage(comp);
+    }
+
+    if (my.length <= 3) {
         createMyBox();
-        setTimeout(function () {
-            createCompBox();
-        }, 500)
-
-
-    } else if (comp.length == 4 || my.length == 4) {
-
+        // createCompBox();
+    }
+    else if (my.length == 4) {
         createMyBox();
-        createCompBox();
-        console.log("asdadad");
 
-        // setTimeout(function () {
             compDamage = countDamage(comp);
             myDamage = countDamage(my);
             comparisonDamage();
             console.log("compDamage" + compDamage);
             console.log("myDamage" + myDamage)
-        // }, 10)
+
     }
 
     if (comp.length > 0 || my.length > 0){
         passButton.style.zIndex = 100;
     }
+
+    if (comp.length < 2){
+        createCompBox();
+    }
+    else if (DmgComp < 18 && comp.length >= 2){
+        DmgComp = countDamage(comp);
+        createCompBox();
+        DmgComp = countDamage(comp);
+    }
+    console.log(DmgComp)
 });
 
 
