@@ -72,11 +72,43 @@ $bgLighter:#F4E4CB;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-
+@mixin shadow_reyMetal{
+    box-shadow:
+            -1px 0px rgb(122,73,0), -1px 1px rgb(87,52,0),
+            -2px 1px rgb(121,72,0), -2px 2px rgb(86,51,0),
+            -3px 2px rgb(120,71,0), -3px 3px rgb(85,50,0),
+            -4px 3px rgb(119,70,0), -4px 4px rgb(84,49,0),
+            -5px 4px rgb(118,69,0), -5px 5px rgb(83,48,0),
+            -6px 5px rgb(117,68,0), -6px 6px rgb(82,47,0),
+            -7px 6px rgb(116,67,0), -7px 7px rgb(81,46,0),
+            -8px 7px rgb(115,66,0), -8px 8px rgb(80,45,0);
+}
+@mixin shadow_metal{
+    box-shadow:
+            -1px 0px rgb(81,82,70), -1px 1px rgb(57,58,55),
+            -2px 1px rgb(80,81,69), -2px 2px rgb(56,57,54),
+            -3px 2px rgb(79,80,68), -3px 3px rgb(55,56,53),
+            -4px 3px rgb(78,79,67), -4px 4px rgb(54,55,52),
+            -5px 4px rgb(77,78,66), -5px 5px rgb(53,54,51),
+            -6px 5px rgb(76,77,65), -6px 6px rgb(52,53,50),
+            -7px 6px rgb(75,76,64), -7px 7px rgb(51,52,49),
+            -8px 7px rgb(74,75,63), -8px 8px rgb(50,51,48);
+}
+@mixin textShadowPlay{
+    text-shadow: -1px 1px 0px #3B4042,
+    -2px 2px 0px #3B4042,
+    -3px 3px 0px #3B4042,
+    -4px 4px 0px #3B4042,
+    -5px 5px 0px #3B4042,
+    -6px 6px 0px #3B4042,
+    -7px 7px 0px #3B4042,
+    -7px 7px 0px #3B4042;
+}
 
 
 @import "sass_modules/appearance";
+@import "sass_modules/appearence_cards";
+@import "sass_modules/play_pannel";
 
 
 

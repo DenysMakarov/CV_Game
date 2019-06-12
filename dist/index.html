@@ -23,31 +23,68 @@
 
 
 <div class="game_panel_wrap">
-    <div class="game_panel">
-        <div class="left_block">
-            <div class="btn_take_cards" id="btn_take_cards">
-                <div class="btn_cover" id="btn_cover_before"></div>
-                <div class="btn_cover" id="btn_cover_after"></div>
-            </div>
+
+    <div class="start_panel" id="start_panel">
+        <div class="btn_play_wrap" id="btn_play_wrap">
+            <div class="btn_play_left"></div>
+            <div class="btn_play_centre"><p class="btn_play_text">PLAY</p></div>
+            <div class="btn_play_right"></div>
         </div>
-        <div class="center_block">
-            <div class="comp_cards" id="comp_cards">
-                <!--<div class="card"></div>-->
-                <!--<div class="card"></div>-->
-                <!--<div class="card"></div>-->
-                <!--<div class="card"></div>-->
-                <!--<div class="card"></div>-->
-            </div>
-            <div class="my_cards" id="my_cards">
+    </div>
+
+
+    <div class="game_panel" id="game_panel">
+
+        <div class="left_block_wrap">
+
+            <div class="left_block">
+                <div class="war_control_block war_control_comp">
+                    <div class="war_control_damage" id="wcdComp">D: ?</div>
+                    <div class="war_control_waight" id="wcwComp">W: ?</div>
+                </div>
+
+                <div class="btn_take_cards" id="btn_take_cards">
+                    <div class="btn_cover" id="btn_cover_before">
+                        <div class="btn_cover_border"></div>
+                    </div>
+                    <div class="btn_cover" id="btn_cover_after"></div>
+                </div>
+
+                <div class="war_control_block war_control_fellow">
+                    <div class="war_control_damage" id="wcdFellow">D: 0</div>
+                    <div class="war_control_waight" id="wcwFellow">W: 0</div>
+                </div>
 
             </div>
         </div>
-        <div class="right_block">
-            <div class="pass_btn_wrap" id="pass_btn_wrap">
-                <div class="pass_btn pass_btn_after" id="pass_btn_after"></div>
-                <div class="pass_btn pass_btn_before" id="pass_btn_before"></div>
+
+        <div class="center_block_wrap">
+            <div class="center_block">
+                <div class="comp_cards_wrap">
+                    <div class="comp_cards" id="comp_cards">
+                        <!--<div class="card_border">-->
+                            <!--<div class="card">-->
+                                <!--<div class="damage">D: 4</div>-->
+                                <!--<div class="weight">W: 3</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+                <div class="my_cards_wrap">
+                    <div class="my_cards" id="my_cards"></div>
+                </div>
             </div>
         </div>
+
+        <div class="right_block_wrap">
+            <div class="right_block">
+                <div class="pass_btn_wrap" id="pass_btn_wrap">
+                    <div class="pass_btn pass_btn_after" id="pass_btn_after"></div>
+                    <div class="pass_btn pass_btn_before" id="pass_btn_before"></div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 

@@ -1,0 +1,210 @@
+
+.game_panel {
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  @include box;
+  position: absolute;
+  background-image: url(../img/bg_2.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.left_block_wrap {
+  width: 15%;
+  height: 100%;
+  @include box;
+  float: left;
+
+
+  .left_block {
+    width: 100%;
+    height: 100%;
+    @include box;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    //margin-left: -100px;
+
+
+    .war_control_block {
+      width: 60%;
+      height: 15%;
+      background: red;
+      position: absolute;
+      -webkit-background-size: cover;
+      background-size: cover;
+      border-radius: 100px;
+      @include box
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .war_control_comp{
+      top: 50px;
+      left: 50px;
+      background-image: url(../img/control_comp.jpg);
+    }
+    .war_control_fellow {
+      bottom: 50px;
+      left: 50px;
+      background-image: url(../img/control_fellow.jpg);
+      .war_control_damage, .war_control_waight{
+        color: black;
+      }
+    }
+    .war_control_damage, .war_control_waight{
+      width: 100%;
+      height: 20%;
+      text-align: center;
+      font-family: 'TruenoBdOl';
+      color: white;
+    }
+
+
+    .btn_take_cards {
+      width: 70%;
+      height: 27%;
+      background: rgba(255, 255, 255, 0.6);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      position: relative;
+      left: 30px;
+      z-index: 10;
+      border-radius: 10px;
+
+
+      .btn_cover {
+        top: 2.5%;
+        width: 95% !important;
+        height: 95% !important;
+        position: absolute;
+        background-image: url(../img/back_of_cards.jpg);
+        -webkit-background-size: cover;
+        background-size: cover;
+        border-radius: 10px;
+      }
+
+      #btn_cover_before {
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+      }
+
+      #btn_cover_after {
+        width: 100%;
+        height: 100%;
+        background: green;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+
+.center_block_wrap {
+  width: 70%;
+  height: 100%;
+  @include box;
+  float: left;
+
+  .center_block {
+    width: 100%;
+    height: 100%;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+
+    .comp_cards_wrap, .my_cards_wrap {
+      width: 100%;
+      height: 50%;
+    }
+
+    .comp_cards, .my_cards {
+      width: 100%;
+      height: 100%;
+      @include box;
+      border: 1px solid gray;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .comp_cards {
+      //margin-top: -50px;
+    }
+
+    .my_cards {
+      align-items: flex-end;
+      //margin-top: 50px;
+    }
+
+    //.card {
+    //  width: 17%;
+    //  height: 70%;
+    //  border: 1px solid gray;
+    //  margin-left: 40px;
+    //  font-size: 50px;
+    //
+    //  @media screen and(max-width: 1440px) {
+    //    margin-left: 23px;
+    //  }
+    //  @media screen and(max-width: 1024px) {
+    //    height: 60%;
+    //    margin-left: 30px;
+    //  }
+    //
+    //}
+  }
+}
+
+.right_block_wrap {
+  width: 15%;
+  height: 100%;
+  float: right;
+  @include box;
+  position: relative;
+  overflow: hidden;
+
+  .right_block {
+    width: 100%;
+    height: 100%;
+    @include box;
+    border: 1px solid gray;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    right: 0px;
+
+    .pass_btn_wrap {
+      width: 70%;
+      height: 27%;
+      background: grey;
+      position: relative;
+      left: 20px;
+      display: block;
+
+      .pass_btn {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: green;
+        z-index: 10;
+      }
+
+      .pass_btn_after {
+        z-index: 1;
+        background: red;
+      }
+    }
+  }
+}
+
+
+
