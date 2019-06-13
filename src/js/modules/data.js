@@ -25,11 +25,11 @@ const cards = [
 
 
 export let mixedCard = [...cards];
-mixCards();
+// mixCards();
 
-function mixCards() {
-    function funMix(a,b) {
-        return Math.random() -0.5;
-    }
-    mixedCard = mixedCard.sort(funMix)
-}
+// export function mixCards(mixedCard) {
+//     function funMix(a,b) {
+//         return Math.random() -0.5;
+//     }
+//     mixedCard = mixedCard.sort(funMix)
+// }
