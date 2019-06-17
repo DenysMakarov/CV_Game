@@ -13,8 +13,12 @@ let deckOfCards = [...mixedCard];
 ///////////////////
 let comp = [];
 let fellow = [];
-let compDamage = overallDamage(comp);
-let myDamage = overallDamage(fellow);
+let compDamage
+    //= overallDamage(comp);
+let myDamage
+    //= overallDamage(fellow);
+let compWeight;
+let myWeight;
 let cardMyBlock = document.getElementById("my_cards");
 let cardCompBlock = document.getElementById("comp_cards");
 let passButton = document.getElementById("pass_btn_before");
@@ -22,17 +26,14 @@ let againButton = document.getElementById("pass_btn_after");
 let DmgComp;
 let compWin =0;
 let fellowWin =0;
-document.getElementById("fellowWin");
 mixCards(deckOfCards)
 
 // console.log(cards)
 document.getElementById("btn_cover_before").addEventListener("click", (e) => {
-
-    console.log(mixedCard);
-
     document.getElementById("pass_btn_wrap").style.opacity = "1";
     againButton.style.zIndex = "1";
     passButton.style.zIndex = 100;
+
 
 
     if (fellow.length <= 4) {
@@ -42,8 +43,13 @@ document.getElementById("btn_cover_before").addEventListener("click", (e) => {
     if (comp.length < 2) {
         createCompBox();
 
-    } else if (compDamage < 18 && comp.length >= 2) {
+    } else if (compWeight < 17 && comp.length >= 2) {
         createCompBox();
+    }
+
+    if (fellow.length  > 0){
+        document.getElementById("pass_btn_after").style.zIndex = 0;
+        document.getElementById("pass_btn_before").innerHTML = "PASS"
     }
 
     document.getElementById("wcdFellow").innerHTML = "D: " + overallDamage(fellow);
@@ -51,8 +57,9 @@ document.getElementById("btn_cover_before").addEventListener("click", (e) => {
 
     compDamage = overallDamage(comp);
     myDamage = overallDamage(fellow);
-    // console.log("compDamage" + compDamage);
-    // console.log("myDamage" + myDamage)
+    compWeight = overallWeight(comp);
+    myWeight = overallWeight(fellow)
+
 
     if (fellow.length == 5) {
         cardCompBlock.innerHTML = "";
@@ -65,7 +72,14 @@ document.getElementById("btn_cover_before").addEventListener("click", (e) => {
         comparisonDamage();
         document.getElementById("wcdComp").innerHTML = "D: " + overallDamage(comp);
         document.getElementById("wcwComp").innerHTML = "W: " + overallWeight(comp);
+        document.getElementById("btn_take_cards_again").style.zIndex = 1000;
+        againButton.style.zIndex = 100;
+        againButton.innerHTML = "AGAIN?";
+        passButton.style.zIndex = 1;
+        passButton.innerHTML = "";
     }
+
+    console.log(compWeight)
 });
 
 function overallDamage(arr) {
@@ -98,34 +112,58 @@ function createCompBox() {
 }
 
 
-// function createComCards() {
-//     for (let i = 0; i < comp.length; i++) {
-//         let x = createCart.createCards(comp[i]);
-//         cardCompBlock.appendChild(x);
-//     }
-// }
-//
-// function createMyCards() {
-//     for (let i = 0; i < my.length; i++) {
-//         let y = createCart.createCards(my[i]);
-//         cardMyBlock.appendChild(y)
-//     }
-// }
 
 
 function comparisonDamage() {
-    if (compDamage > 21 && myDamage > 21 || compDamage == myDamage) {
-        console.log("You both equal")
-    } else if (compDamage < myDamage && myDamage < 22 || compDamage > 21 && myDamage < 22) {
-        console.log("You Win");
+    if (compWeight > 21 && myWeight > 21 || compWeight < 21 && myWeight < 21 && compDamage == myDamage) {
+        // console.log("You both equal")
+        resultPanel()
+    }
+    else if (compDamage < myDamage && myWeight < 22 || compWeight > 21 && myWeight < 22) {
+        // console.log("You Win");
         fellowWin+=1;
         document.getElementById("fellowWin").innerHTML = "Wins: "+ +fellowWin;
-
-    } else if (compDamage > myDamage || compDamage < 22 && myDamage > 21) {
-        console.log("Comp Win");
+        resultPanel()
+    }
+    else if (compDamage > myDamage || compWeight < 22 && myWeight > 21) {
+        // console.log("Comp Win");
         compWin+=1;
         document.getElementById("compWin").innerHTML = "Wins: "+ +compWin;
+        resultPanel()
     }
+}
+
+function resultPanel(){
+    let descResultText  =document.getElementById("desc-result_war");
+    let resultWarBlock = document.getElementById("resultWAR_wrap");
+    resultWarBlock.style.display = "block";
+    document.getElementById("points_block_text_fellow").innerHTML = myDamage;
+    document.getElementById("points_block_text_comp").innerHTML = compDamage;
+
+    if (compWeight > 21 && myWeight > 21){
+        descResultText.innerHTML = "Yours spaceships have fallen"
+    }
+
+    else if(compDamage == myDamage && compWeight > 21 && myWeight > 21){
+        descResultText.innerHTML = "You both equal"
+    }
+    else if(compWeight > 21 && myWeight < 22){
+        descResultText.innerHTML = "Enemy`s spaceship has fallen";
+        document.getElementById("points_block_text_comp").innerHTML = "FALL";
+    }
+
+    else if(compDamage < myDamage && myWeight < 22){
+        descResultText.innerHTML = "You Win"
+    }
+
+    else if(compDamage > myDamage && myWeight < 22){
+        descResultText.innerHTML = "Comp Win"
+    }
+    else if(compWeight < 22 && myWeight > 21){
+        descResultText.innerHTML = "Your`s spaceship has fallen";
+        document.getElementById("points_block_text_fellow").innerHTML = "FALL";
+    }
+
 }
 
 // function countDamage(target) {
@@ -143,19 +181,23 @@ function comparisonDamage() {
 ////////
 passButton.addEventListener("click", (e) => {
     for (let i = 0; i <= 4; i++) {
-        DmgComp = overallDamage(comp);
-        if (DmgComp < 17) {
+        compWeight = overallWeight(comp)
+        if (compWeight < 17) {
             createCompBox()
         }
     }
+    // comparisonDamage();
 
 
     cardCompBlock.innerHTML = "";
     for (let i = 0; i < comp.length; i++) {
         cardCompBlock.appendChild(createCart.createCards(comp[i]))
     }
+
+
     compDamage = overallDamage(comp);
     myDamage = overallDamage(fellow);
+
     comparisonDamage();
 
 
@@ -167,16 +209,27 @@ passButton.addEventListener("click", (e) => {
     document.getElementById("btn_cover_after").style.zIndex = 100;
 
     againButton.style.zIndex = 100;
-    againButton.innerHTML = "AGAIN";
+    againButton.innerHTML = "";
+    document.getElementById("btn_take_cards_again").style.zIndex = "10000";
+    // document.getElementById("btn_take_cards_again").style.zIndex = 1000;
 
     passButton.style.zIndex = 1;
-    passButton.innerHTML = "";
-
+    passButton.innerHTML = "AGAIN?";
 });
 
 
-againButton.addEventListener("click", (e) => {
+// againButton.addEventListener("click", (e) => {
+//     againPlay();
+//     document.getElementById("resultWAR_wrap").style.display = "none";
+// });
 
+
+// document.getElementById("btn_take_cards_again").addEventListener("click", (e)=>{
+//     againPlay();
+//     document.getElementById("resultWAR_wrap").style.display = "none";
+// })
+
+function againPlay() {
     deckOfCards = [...mixedCard];
     mixCards(deckOfCards);
     cardMyBlock.innerHTML = "";
@@ -190,8 +243,11 @@ againButton.addEventListener("click", (e) => {
     document.getElementById("wcwComp").innerHTML = "W: ?";
     document.getElementById("wcdFellow").innerHTML = "D: 0";
     document.getElementById("wcwFellow").innerHTML = "W: 0";
+    document.getElementById("btn_take_cards_again").style.zIndex = "1";
+    document.getElementById("pass_btn_before").innerHTML = "Take Card"
 
-});
+}
+
 
 
 // mix of carts
@@ -199,10 +255,15 @@ function mixCards(mixedCard) {
     function funMix(a, b) {
         return Math.random() - 0.5;
     }
-
     mixedCard = mixedCard.sort(funMix)
 }
 
 document.getElementById("btn_play_wrap").addEventListener("click", (e) => {
     document.getElementById("game_panel").style.zIndex = "1000"
+});
+
+
+document.getElementById("button_again").addEventListener("click", (e)=>{
+    againPlay();
+    document.getElementById("resultWAR_wrap").style.display = "none";
 })
