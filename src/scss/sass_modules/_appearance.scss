@@ -221,6 +221,10 @@
       left: 270px;
       animation-name: game_description_left_1440;
     }
+    @media screen and (max-width: 1024px){
+      left: 270px;
+      animation-name: game_description_left_1024;
+    }
   }
 
   .game_description_right{
@@ -228,9 +232,13 @@
     border: 10px solid white;
     right: 720px;
     border-left: none;
+
     @media screen and (max-width: 1440px){
       right: 270px;
       animation-name: game_description_right_1440;
+    }
+    @media screen and (max-width: 1024px){
+      animation-name: game_description_right_1024;
     }
   }
 
@@ -263,10 +271,30 @@
     }
     100%{
       opacity: 1;
-      left: 270px;
+      left: 470px;
     }
   }
   @keyframes game_description_right_1440 {
+    0%{
+      opacity: 0;
+      right: 0px;
+    }
+    100%{
+      opacity: 1;
+      right: 470px;
+    }
+  }
+  @keyframes game_description_left_1024 {
+    0%{
+      opacity: 0;
+      left: 0px;
+    }
+    100%{
+      opacity: 1;
+      left: 270px;
+    }
+  }
+  @keyframes game_description_right_1024 {
     0%{
       opacity: 0;
       right: 0px;
