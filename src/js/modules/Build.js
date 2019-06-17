@@ -26,7 +26,7 @@ export class Builder {
         return borderCard
     }
     createCardsComp(el){
-        let borderCard = Builder.createNewElement("div", "card_border", null, null, null);
+        let borderCard = Builder.createNewElement("div", "card_border card_border_comp", null, null, null);
         let card = Builder.createNewElement("div", "card card_comp", null, null, "back_of_cards.jpg")
         borderCard.appendChild(card)
         return borderCard

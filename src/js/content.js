@@ -74,7 +74,7 @@ document.getElementById("btn_cover_before").addEventListener("click", (e) => {
         document.getElementById("wcwComp").innerHTML = "W: " + overallWeight(comp);
         document.getElementById("btn_take_cards_again").style.zIndex = 1000;
         againButton.style.zIndex = 100;
-        againButton.innerHTML = "AGAIN?";
+        againButton.innerHTML = "Take card";
         passButton.style.zIndex = 1;
         passButton.innerHTML = "";
     }
@@ -109,6 +109,10 @@ function createCompBox() {
     comp.push(deckOfCards[+deckOfCards.length - 1]);
     deckOfCards.pop();
     cardCompBlock.appendChild(createCart.createCardsComp(comp[+comp.length - 1]))
+    // cardCompBlock.lastChild.classlist.add("ajdkladj")
+    // let compCardAddAnimation = Array.from(document.getElementsByClassName("card_border_comp")).map((el)=>{
+    //     el.
+    // })
 }
 
 
@@ -144,8 +148,8 @@ function resultPanel(){
         descResultText.innerHTML = "Yours spaceships have fallen"
     }
 
-    else if(compDamage == myDamage && compWeight > 21 && myWeight > 21){
-        descResultText.innerHTML = "You both equal"
+    else if(compDamage == myDamage && compWeight < 21 && myWeight < 21){
+        descResultText.innerHTML = "You both are equal"
     }
     else if(compWeight > 21 && myWeight < 22){
         descResultText.innerHTML = "Enemy`s spaceship has fallen";
@@ -214,7 +218,7 @@ passButton.addEventListener("click", (e) => {
     // document.getElementById("btn_take_cards_again").style.zIndex = 1000;
 
     passButton.style.zIndex = 1;
-    passButton.innerHTML = "AGAIN?";
+    passButton.innerHTML = " ";
 });
 
 
@@ -259,11 +263,40 @@ function mixCards(mixedCard) {
 }
 
 document.getElementById("btn_play_wrap").addEventListener("click", (e) => {
-    document.getElementById("game_panel").style.zIndex = "1000"
+    document.getElementById("game_panel").style.zIndex = "1000";
+    document.getElementById("left_block").style.animationName = "apearLeftPannel";
+    document.getElementById("btn_play_wrap").style.opacity = "0";
+    document.getElementById("right_block").style.animation = "apearRightPannel 1s forwards";
+
+   setTimeout(function () {
+       let arrAnimatiomMixCards = Array.from(document.getElementsByClassName("animation_mix_card")).map((el)=>{
+           el.style.animationName = "cardsMix";
+       })
+   },1000)
 });
 
 
-document.getElementById("button_again").addEventListener("click", (e)=>{
+let playAgaine = document.getElementById("button_again").addEventListener("click", (e)=>{
     againPlay();
     document.getElementById("resultWAR_wrap").style.display = "none";
+    let arrAnimatiomMixCards = Array.from(document.getElementsByClassName("animation_mix_card")).map((el)=>{
+        el.style.animationName = "none";
+        setTimeout(function () {
+            el.style.animationName = "cardsMix";
+        },500)
+        // el.style.animation = "cardsMix 0.7s forwards ease-in-out;";
+    })
+});
+
+document.getElementById("button_disapear_game_description").addEventListener("click", (e)=>{
+        // document.getElementById("game_description_block").style.display = "none";
+    document.getElementById("game_description_left").style.animationName = "game_description_left_disapear";
+    document.getElementById("game_description_right").style.animationName = "game_description_right_disapear";
+    document.getElementById("game_description_block").style.animation = "game_description_block_disapear 1s forwards";
+    setTimeout(function () {
+        document.getElementById("game_description_block").style.zIndex = "1";
+    },1000)
+
+
+
 })

@@ -33,6 +33,26 @@
     </div>
 
 
+    <div class="game_description_block" id="game_description_block">
+        <div class="game_description game_description_left" id="game_description_left"></div>
+        <div class="game_description game_description_center">
+
+            This is a card game about Mech Warriors. <br>
+            Your goal is to defeat the team of computer and will not overweight your spaceship.
+            Each card has a weight and point of damage. You need to get as many cards as afford your`s spaceship.
+            Weight wich spaceship can take only until 21 tonnes.
+            Sometimes computer fears to overweight own spaceship, don`t lose your`s opportunities to defeat enemies
+            If you take overweight your spaceship will fall and destroy. <br>
+            Good luck!!!
+
+            <div class="button_disapear_game_description"id="button_disapear_game_description">OK</div>
+
+        </div>
+        <div class="game_description game_description_right" id="game_description_right"></div>
+
+    </div>
+
+
     <div class="game_panel" id="game_panel">
 
         <div class="resultWAR_wrap" id="resultWAR_wrap">
@@ -54,13 +74,23 @@
 
         <div class="left_block_wrap">
 
-            <div class="left_block">
+            <div class="left_block" id="left_block">
                 <div class="war_control_block war_control_comp">
                     <div class="war_control_damage" id="wcdComp">D: ?</div>
                     <div class="war_control_waight" id="wcwComp">W: ?</div>
                 </div>
 
                 <div class="btn_take_cards" id="btn_take_cards">
+
+                    <div class="animation_mix_card animation_mix_card_1">
+                        <div class="animation_mix_card_back"></div>
+                    </div>
+                    <div class="animation_mix_card animation_mix_card_2">
+                        <div class="animation_mix_card_back"></div>
+                    </div>
+                    <div class="animation_mix_card animation_mix_card_3">
+                        <div class="animation_mix_card_back"></div>
+                    </div>
 
                     <p class="btn_take_cards_again" id="btn_take_cards_again">AGAIN</p>
 
@@ -82,16 +112,9 @@
         </div>
 
         <div class="center_block_wrap">
-            <div class="center_block">
+            <div class="center_block" id="center_block">
                 <div class="comp_cards_wrap">
-                    <div class="comp_cards" id="comp_cards">
-                        <!--<div class="card_border">-->
-                            <!--<div class="card">-->
-                                <!--<div class="damage">D: 4</div>-->
-                                <!--<div class="weight">W: 3</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    </div>
+                    <div class="comp_cards" id="comp_cards"></div>
                 </div>
                 <div class="my_cards_wrap">
                     <div class="my_cards" id="my_cards"></div>
@@ -100,7 +123,7 @@
         </div>
 
         <div class="right_block_wrap">
-            <div class="right_block">
+            <div class="right_block" id="right_block">
                 <div class="pass_btn_wrap" id="pass_btn_wrap">
                     <p class="win_block compWin" id="compWin">Wins: 0</p>
                     <p class="win_block fellowWin" id="fellowWin">Wins: 0</p>
