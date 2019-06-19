@@ -1,40 +1,25 @@
 import {Builder} from "./modules/Build";
-
 let createCart = new Builder();
 
-
 import {mixedCard} from "./modules/data";
-
 let deckOfCards = [...mixedCard];
-// let x = [...mixedCard]
 
-// let Cards = mixedCard;
 
-///////////////////
-let comp = [];
-let fellow = [];
-let compDamage
-    //= overallDamage(comp);
-let myDamage
-    //= overallDamage(fellow);
-let compWeight;
-let myWeight;
+let comp = [], fellow = [];
+let compDamage, myDamage;
+let compWeight, myWeight;
 let cardMyBlock = document.getElementById("my_cards");
 let cardCompBlock = document.getElementById("comp_cards");
 let passButton = document.getElementById("pass_btn_before");
 let againButton = document.getElementById("pass_btn_after");
-let DmgComp;
-let compWin =0;
-let fellowWin =0;
-mixCards(deckOfCards)
+let compWin =0, fellowWin =0;
+mixCards(deckOfCards);
 
 // console.log(cards)
 document.getElementById("btn_cover_before").addEventListener("click", (e) => {
     document.getElementById("pass_btn_wrap").style.opacity = "1";
     againButton.style.zIndex = "1";
     passButton.style.zIndex = 100;
-
-
 
     if (fellow.length <= 4) {
         createMyBox();
@@ -60,7 +45,6 @@ document.getElementById("btn_cover_before").addEventListener("click", (e) => {
     compWeight = overallWeight(comp);
     myWeight = overallWeight(fellow)
 
-
     if (fellow.length == 5) {
         cardCompBlock.innerHTML = "";
         passButton.style.zIndex = 1;
@@ -68,7 +52,6 @@ document.getElementById("btn_cover_before").addEventListener("click", (e) => {
         for (let i = 0; i < comp.length; i++) {
             cardCompBlock.appendChild(createCart.createCards(comp[i]))
         }
-
         comparisonDamage();
         document.getElementById("wcdComp").innerHTML = "D: " + overallDamage(comp);
         document.getElementById("wcwComp").innerHTML = "W: " + overallWeight(comp);
@@ -78,8 +61,6 @@ document.getElementById("btn_cover_before").addEventListener("click", (e) => {
         passButton.style.zIndex = 1;
         passButton.innerHTML = "";
     }
-
-    console.log(compWeight)
 });
 
 function overallDamage(arr) {
@@ -98,7 +79,6 @@ function overallWeight(arr) {
     return weight
 }
 
-
 function createMyBox() {
     fellow.push(deckOfCards[+deckOfCards.length - 1]);
     deckOfCards.pop();
@@ -109,28 +89,18 @@ function createCompBox() {
     comp.push(deckOfCards[+deckOfCards.length - 1]);
     deckOfCards.pop();
     cardCompBlock.appendChild(createCart.createCardsComp(comp[+comp.length - 1]))
-    // cardCompBlock.lastChild.classlist.add("ajdkladj")
-    // let compCardAddAnimation = Array.from(document.getElementsByClassName("card_border_comp")).map((el)=>{
-    //     el.
-    // })
 }
-
-
-
 
 function comparisonDamage() {
     if (compWeight > 21 && myWeight > 21 || compWeight < 21 && myWeight < 21 && compDamage == myDamage) {
-        // console.log("You both equal")
         resultPanel()
     }
     else if (compDamage < myDamage && myWeight < 22 || compWeight > 21 && myWeight < 22) {
-        // console.log("You Win");
         fellowWin+=1;
         document.getElementById("fellowWin").innerHTML = "Wins: "+ +fellowWin;
         resultPanel()
     }
     else if (compDamage > myDamage || compWeight < 22 && myWeight > 21) {
-        // console.log("Comp Win");
         compWin+=1;
         document.getElementById("compWin").innerHTML = "Wins: "+ +compWin;
         resultPanel()
@@ -182,7 +152,6 @@ function resultPanel(){
 // }
 
 
-////////
 passButton.addEventListener("click", (e) => {
     for (let i = 0; i <= 4; i++) {
         compWeight = overallWeight(comp)
@@ -190,23 +159,13 @@ passButton.addEventListener("click", (e) => {
             createCompBox()
         }
     }
-    // comparisonDamage();
-
-
     cardCompBlock.innerHTML = "";
     for (let i = 0; i < comp.length; i++) {
         cardCompBlock.appendChild(createCart.createCards(comp[i]))
     }
-
-
     compDamage = overallDamage(comp);
     myDamage = overallDamage(fellow);
-
     comparisonDamage();
-
-
-    console.log("compDamage" + compDamage);
-    console.log("myDamage" + myDamage);
 
     document.getElementById("wcdComp").innerHTML = "D: " + overallDamage(comp);
     document.getElementById("wcwComp").innerHTML = "W: " + overallWeight(comp);
@@ -215,23 +174,10 @@ passButton.addEventListener("click", (e) => {
     againButton.style.zIndex = 100;
     againButton.innerHTML = "";
     document.getElementById("btn_take_cards_again").style.zIndex = "10000";
-    // document.getElementById("btn_take_cards_again").style.zIndex = 1000;
 
     passButton.style.zIndex = 1;
     passButton.innerHTML = " ";
 });
-
-
-// againButton.addEventListener("click", (e) => {
-//     againPlay();
-//     document.getElementById("resultWAR_wrap").style.display = "none";
-// });
-
-
-// document.getElementById("btn_take_cards_again").addEventListener("click", (e)=>{
-//     againPlay();
-//     document.getElementById("resultWAR_wrap").style.display = "none";
-// })
 
 function againPlay() {
     deckOfCards = [...mixedCard];
@@ -249,10 +195,7 @@ function againPlay() {
     document.getElementById("wcwFellow").innerHTML = "W: 0";
     document.getElementById("btn_take_cards_again").style.zIndex = "1";
     document.getElementById("pass_btn_before").innerHTML = "Take Card"
-
 }
-
-
 
 // mix of carts
 function mixCards(mixedCard) {
@@ -262,7 +205,7 @@ function mixCards(mixedCard) {
     mixedCard = mixedCard.sort(funMix)
 }
 
-document.getElementById("btn_play_wrap").addEventListener("click", (e) => {
+let playBtn = document.getElementById("btn_play_wrap").addEventListener("click", (e) => {
     document.getElementById("game_panel").style.zIndex = "1000";
     document.getElementById("left_block").style.animationName = "apearLeftPannel";
     document.getElementById("btn_play_wrap").style.opacity = "0";
@@ -283,20 +226,14 @@ let playAgaine = document.getElementById("button_again").addEventListener("click
         el.style.animationName = "none";
         setTimeout(function () {
             el.style.animationName = "cardsMix";
-        },500)
-        // el.style.animation = "cardsMix 0.7s forwards ease-in-out;";
+        },200)
     })
 });
 
 document.getElementById("button_disapear_game_description").addEventListener("click", (e)=>{
-        // document.getElementById("game_description_block").style.display = "none";
-    document.getElementById("game_description_left").style.animationName = "game_description_left_disapear";
-    document.getElementById("game_description_right").style.animationName = "game_description_right_disapear";
+
     document.getElementById("game_description_block").style.animation = "game_description_block_disapear 1s forwards";
     setTimeout(function () {
         document.getElementById("game_description_block").style.zIndex = "1";
     },1000)
-
-
-
-})
+});

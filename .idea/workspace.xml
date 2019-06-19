@@ -3,7 +3,46 @@
   <component name="ChangeListManager">
     <list default="true" id="c137c206-6969-4d1f-aaef-aa4b148939c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/sass_modules/_appearance.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/sass_modules/_appearance.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/6.jp2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/BattleTech L.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/bg_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/bg_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/bg_button.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/bg_play.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/border1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/control.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/reyMetal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firstImg/start_bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/modules/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/modules/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/sass_modules/_appearance.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/sass_modules/_start_panel.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/sass_modules/appearence_cards.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/sass_modules/_appearence_cards.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/sass_modules/play_pannel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/sass_modules/_play_pannel.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,26 +59,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="36" column="93" selection-start-line="36" selection-start-column="93" selection-end-line="36" selection-end-column="93" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/scss/sass_modules/_appearance.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="240" selection-start-line="240" selection-end-line="240" />
+            <state relative-caret-position="218">
+              <caret line="44" column="49" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scss/sass_modules/play_pannel.scss">
+        <entry file="file://$PROJECT_DIR$/src/scss/sass_modules/_start_panel.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6784">
-              <caret line="243" selection-start-line="243" selection-end-line="243" />
+            <state relative-caret-position="249">
+              <caret line="169" column="34" selection-start-line="169" selection-start-column="34" selection-end-line="169" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scss/sass_modules/_play_pannel.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -56,17 +95,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/modules/data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="29" selection-start-line="29" selection-start-column="3" selection-end-line="34" selection-end-column="4" />
+            <state relative-caret-position="437">
+              <caret line="19" column="65" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/content.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="296" column="77" selection-start-line="296" selection-start-column="77" selection-end-line="296" selection-end-column="77" />
+            <state relative-caret-position="298">
+              <caret line="228" column="11" selection-start-line="228" selection-start-column="11" selection-end-line="228" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -81,13 +120,14 @@
       <list>
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/scss/main.scss" />
-        <option value="$PROJECT_DIR$/src/js/modules/data.js" />
         <option value="$PROJECT_DIR$/src/js/modules/Build.js" />
         <option value="$PROJECT_DIR$/src/scss/sass_modules/appearence_cards.scss" />
-        <option value="$PROJECT_DIR$/src/js/content.js" />
         <option value="$PROJECT_DIR$/src/scss/sass_modules/play_pannel.scss" />
-        <option value="$PROJECT_DIR$/dist/index.html" />
         <option value="$PROJECT_DIR$/src/scss/sass_modules/_appearance.scss" />
+        <option value="$PROJECT_DIR$/src/js/modules/data.js" />
+        <option value="$PROJECT_DIR$/src/scss/sass_modules/_start_panel.scss" />
+        <option value="$PROJECT_DIR$/dist/index.html" />
+        <option value="$PROJECT_DIR$/src/js/content.js" />
       </list>
     </option>
   </component>
@@ -181,12 +221,12 @@
       <workItem from="1560431196180" duration="1775000" />
       <workItem from="1560433012448" duration="1772000" />
       <workItem from="1560434837238" duration="1689000" />
-      <workItem from="1560757119477" duration="24168000" />
+      <workItem from="1560757119477" duration="26881000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90250000" />
+    <option name="totallyTimeSpent" value="92963000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="822" height="816" extended-state="0" />
@@ -232,17 +272,10 @@
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/sass_modules/appearence_cards.scss">
+    <entry file="file://$PROJECT_DIR$/src/scss/sass_modules/_appearence_cards.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/modules/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="29" selection-start-line="29" selection-start-column="3" selection-end-line="34" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -267,31 +300,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/content.js">
+    <entry file="file://$PROJECT_DIR$/src/js/modules/data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="296" column="77" selection-start-line="296" selection-start-column="77" selection-end-line="296" selection-end-column="77" />
+        <state relative-caret-position="437">
+          <caret line="19" column="65" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/sass_modules/_play_pannel.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/sass_modules/_start_panel.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="169" column="34" selection-start-line="169" selection-start-column="34" selection-end-line="169" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="36" column="93" selection-start-line="36" selection-start-column="93" selection-end-line="36" selection-end-column="93" />
+        <state relative-caret-position="218">
+          <caret line="44" column="49" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/sass_modules/play_pannel.scss">
+    <entry file="file://$PROJECT_DIR$/src/js/content.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6784">
-          <caret line="243" selection-start-line="243" selection-end-line="243" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/sass_modules/_appearance.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="240" selection-start-line="240" selection-end-line="240" />
+        <state relative-caret-position="298">
+          <caret line="228" column="11" selection-start-line="228" selection-start-column="11" selection-end-line="228" selection-end-column="11" />
         </state>
       </provider>
     </entry>

@@ -166,9 +166,13 @@
     }
   }
 
+  .game_description_center p{
+    text-decoration: underline red;
+  }
+
   .game_description_center, .game_description{
-    top: 350px;
-    width: 450px;
+    top: 380px;
+    width: 550px;
     height: 300px;
     border: 1px solid white;
     position: absolute;
@@ -202,7 +206,7 @@
 
 
   .game_description_left, .game_description_right{
-    width: 230px;
+    width: 260px;
     height: 330px;
     position: absolute;
     margin-top: -15px;
@@ -214,15 +218,15 @@
   .game_description_left{
     animation-name: game_description_left;
     border: 10px solid white;
-    left: 720px;
+    left: 620px;
     border-right: none;
 
     @media screen and (max-width: 1440px){
-      left: 270px;
+      left: 230px;
       animation-name: game_description_left_1440;
     }
     @media screen and (max-width: 1024px){
-      left: 270px;
+      //left: 230px;
       animation-name: game_description_left_1024;
     }
   }
@@ -230,11 +234,11 @@
   .game_description_right{
     animation-name: game_description_right;
     border: 10px solid white;
-    right: 720px;
+    right: 620px;
     border-left: none;
 
     @media screen and (max-width: 1440px){
-      right: 270px;
+      right: 230px;
       animation-name: game_description_right_1440;
     }
     @media screen and (max-width: 1024px){
@@ -249,7 +253,7 @@
     }
     100%{
       opacity: 1;
-      left: 720px;
+      left: 650px;
     }
   }
   @keyframes game_description_right {
@@ -259,7 +263,7 @@
     }
     100%{
       opacity: 1;
-      right: 720px;
+      right: 650px;
     }
   }
 
@@ -271,7 +275,7 @@
     }
     100%{
       opacity: 1;
-      left: 470px;
+      left: 430px;
     }
   }
   @keyframes game_description_right_1440 {
@@ -281,7 +285,7 @@
     }
     100%{
       opacity: 1;
-      right: 470px;
+      right: 430px;
     }
   }
   @keyframes game_description_left_1024 {
@@ -291,7 +295,7 @@
     }
     100%{
       opacity: 1;
-      left: 270px;
+      left: 215px;
     }
   }
   @keyframes game_description_right_1024 {
@@ -301,8 +305,7 @@
     }
     100%{
       opacity: 1;
-      right: 270px;
+      right: 215px;
     }
   }
-
 }
